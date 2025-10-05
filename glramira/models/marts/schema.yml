@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: agg_orders
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: order_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_dim_product')
+              field: product_id
+      - name: user_id
+        tests:
+          - relationships:
+              to: ref('stg_dim_user')
+              field: user_id
+      - name: store_id
+        tests:
+          - relationships:
+              to: ref('stg_dim_store')
+              field: store_id
+      - name: date_id
+        tests:
+          - relationships:
+              to: ref('stg_dim_date')
+              field: date_id
+      - name: location_id
+        tests:
+          - relationships:
+              to: ref('stg_dim_location')
+              field: location_id
+      - name: device_id
+        tests:
+          - relationships:
+              to: ref('stg_dim_device')
+              field: device_id
+

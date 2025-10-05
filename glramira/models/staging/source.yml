@@ -1,0 +1,117 @@
+version: 2
+sources:
+  - name: product_info
+    database: project-data-engineer-469310
+    schema: product_info
+    tables:
+      - name: event
+        description: "This table contains user events data"
+      - name: ip_locations
+        description: "This table contains IP location data"
+      - name: product
+        description: "This table contains product data"
+      - name: exchange_rate
+        description: "This table contains exchange rate data"
+# ===========================================================
+# Phần TEST cho các bảng staging
+# ===========================================================
+models:
+  - name: stg_dim_date
+    description: "Dimension về thời gian, sinh từ timestamp trong bảng event"
+    columns:
+      - name: date_id
+        tests:
+          - not_null
+          - unique
+      - name: full_date
+        tests:
+          - not_null
+
+  - name: stg_dim_device
+    description: "Dimension về thiết bị người dùng"
+    columns:
+      - name: device_id
+        tests:
+          - not_null
+          - unique
+      - name: user_agent
+        tests:
+          - dbt_expectations.expect_column_values_to_not_be_null
+
+  - name: stg_dim_location
+    description: "Dimension vị trí địa lý theo IP"
+    columns:
+      - name: location_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_dim_product
+    description: "Dimension sản phẩm"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+          - unique
+      - name: product_price
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+
+  - name: stg_dim_store
+    description: "Dimension cửa hàng"
+    columns:
+      - name: store_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_dim_user
+    description: "Dimension người dùng"
+    columns:
+      - name: user_id
+        tests:
+          - not_null
+          - unique
+  - name: stg_fact_orders
+    description: "Bảng fact lưu thông tin đơn hàng"
+    # columns:
+    #   - name: event_id
+    #     tests:
+    #       - not_null
+    #       - unique
+    #   - name: total_amount
+    #     tests:
+    #       - dbt_expectations.expect_column_values_to_be_between:
+    #           min_value: 0
+    #           strictly: true
+    #   - name: product_id
+    #     tests:
+    #       - relationships:
+    #           to: ref('stg_dim_product')
+    #           field: product_id
+    #   - name: user_id
+    #     tests:
+    #       - relationships:
+    #           to: ref('stg_dim_user')
+    #           field: user_id
+    #   - name: store_id
+    #     tests:
+    #       - relationships:
+    #           to: ref('stg_dim_store')
+    #           field: store_id
+    #   - name: date_id
+    #     tests:
+    #       - relationships:
+    #           to: ref('stg_dim_date')
+    #           field: date_id
+    #   - name: location_id
+    #     tests:
+    #       - relationships:
+    #           to: ref('stg_dim_location')
+    #           field: location_id
+    #   - name: device_id
+    #     tests:
+    #       - relationships:
+    #           to: ref('stg_dim_device')
+    #           field: device_id
