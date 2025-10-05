@@ -1,0 +1,9 @@
+[project]
+name = "dbt-glamira-prod"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dbt-bigquery>=1.10.2",
+]

@@ -1,0 +1,402 @@
+[0m12:49:17.118533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5dcd20e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5dd049a10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5dccce590>]}
+
+
+============================== 12:49:17.169660 | d6010f20-736d-4a7b-87ce-aa6ddc50a3e3 ==============================
+[0m12:49:17.169660 [info ] [MainThread]: Running with dbt=1.10.13
+[0m12:49:17.170596 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'write_json': 'True', 'static_parser': 'True', 'profiles_dir': '/home/quakinh943/.dbt', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'no_print': 'None', 'target_path': 'None', 'log_cache_events': 'False', 'debug': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'printer_width': '80', 'invocation_command': 'dbt init my_project', 'introspect': 'True', 'quiet': 'False', 'log_format': 'default', 'indirect_selection': 'eager', 'empty': 'None', 'warn_error': 'None', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m12:49:17.244220 [debug] [MainThread]: Starter project path: /home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m12:49:17.251357 [info ] [MainThread]: 
+Your new dbt project "my_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:49:17.252108 [info ] [MainThread]: Setting up your profile.
+[0m12:50:35.876244 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m12:50:35.879158 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/cli/main.py", line 483, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/task/init.py", line 243, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m12:50:35.880810 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 78.83616, "process_in_blocks": "27488", "process_kernel_time": 0.436548, "process_mem_max_rss": "120312", "process_out_blocks": "36144", "process_user_time": 3.790023}
+[0m12:50:35.881649 [debug] [MainThread]: Command `dbt init` failed at 12:50:35.881471 after 78.84 seconds
+[0m12:50:35.882312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5dccebbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5dccce490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5dccc7910>]}
+[0m12:50:35.882965 [debug] [MainThread]: Flushing usage events
+[0m12:50:36.103975 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:51:09.709264 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7fc5f3e390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7fc350acd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7fc5f27610>]}
+
+
+============================== 12:51:09.713998 | 0d7acbae-a6b4-42a5-b684-a43d6ca15a64 ==============================
+[0m12:51:09.713998 [info ] [MainThread]: Running with dbt=1.10.13
+[0m12:51:09.714896 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'indirect_selection': 'eager', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'use_colors': 'True', 'target_path': 'None', 'log_path': 'logs', 'quiet': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'debug': 'False', 'use_experimental_parser': 'False', 'profiles_dir': '/home/quakinh943/.dbt', 'invocation_command': 'dbt init glramira', 'empty': 'None', 'version_check': 'True'}
+[0m12:51:09.726472 [debug] [MainThread]: Starter project path: /home/quakinh943/dbt_glamira_prod/.venv/lib/python3.11/site-packages/dbt/include/starter_project
+[0m12:51:09.730211 [info ] [MainThread]: 
+Your new dbt project "glramira" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:51:09.730880 [info ] [MainThread]: Setting up your profile.
+[0m17:06:42.972763 [info ] [MainThread]: Profile glramira written to /home/quakinh943/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:06:42.974929 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 15333.339, "process_in_blocks": "65168", "process_kernel_time": 2.033595, "process_mem_max_rss": "403544", "process_out_blocks": "181608", "process_user_time": 13.838629}
+[0m17:06:42.976396 [debug] [MainThread]: Command `dbt init` succeeded at 17:06:42.976183 after 15333.34 seconds
+[0m17:06:42.977119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7fc5f42a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7fc7583050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7fc5db9fd0>]}
+[0m17:06:42.977977 [debug] [MainThread]: Flushing usage events
+[0m17:06:43.178369 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:06:52.722470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f766f9fa690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f766fa35090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f766f862450>]}
+
+
+============================== 17:06:52.729423 | b36d0884-c77b-42e4-8e45-b213159c2ea2 ==============================
+[0m17:06:52.729423 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:06:52.730422 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt debug', 'profiles_dir': '/home/quakinh943/.dbt', 'warn_error': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'introspect': 'True', 'printer_width': '80', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'partial_parse': 'True', 'target_path': 'None', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'no_print': 'None', 'write_json': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'empty': 'None'}
+[0m17:06:52.750805 [info ] [MainThread]: dbt version: 1.10.13
+[0m17:06:52.751506 [info ] [MainThread]: python version: 3.11.2
+[0m17:06:52.752053 [info ] [MainThread]: python path: /home/quakinh943/dbt_glamira_prod/.venv/bin/python3
+[0m17:06:52.752503 [info ] [MainThread]: os info: Linux-6.1.0-39-cloud-amd64-x86_64-with-glibc2.36
+[0m17:06:56.988209 [info ] [MainThread]: Using profiles dir at /home/quakinh943/.dbt
+[0m17:06:56.989245 [info ] [MainThread]: Using profiles.yml file at /home/quakinh943/.dbt/profiles.yml
+[0m17:06:56.989752 [info ] [MainThread]: Using dbt_project.yml file at /home/quakinh943/dbt_glamira_prod/dbt_project.yml
+[0m17:06:56.990261 [info ] [MainThread]: adapter type: bigquery
+[0m17:06:56.990696 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:06:56.991239 [info ] [MainThread]: Configuration:
+[0m17:06:56.991737 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:06:56.992233 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m17:06:56.992696 [info ] [MainThread]: Required dependencies:
+[0m17:06:56.993190 [debug] [MainThread]: Executing "git --help"
+[0m17:06:56.996206 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:06:56.997095 [debug] [MainThread]: STDERR: "b''"
+[0m17:06:56.997778 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:06:56.998477 [info ] [MainThread]: Connection:
+[0m17:06:56.999165 [info ] [MainThread]:   method: service-account
+[0m17:06:56.999827 [info ] [MainThread]:   database: project-data-engineer-469310
+[0m17:06:57.000478 [info ] [MainThread]:   execution_project: project-data-engineer-469310
+[0m17:06:57.001077 [info ] [MainThread]:   schema: dbt_glramira
+[0m17:06:57.001696 [info ] [MainThread]:   location: US
+[0m17:06:57.002345 [info ] [MainThread]:   priority: interactive
+[0m17:06:57.002946 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m17:06:57.003611 [info ] [MainThread]:   impersonate_service_account: None
+[0m17:06:57.004261 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m17:06:57.004881 [info ] [MainThread]:   job_retries: 1
+[0m17:06:57.005520 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m17:06:57.006155 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m17:06:57.006782 [info ] [MainThread]:   timeout_seconds: 300
+[0m17:06:57.007453 [info ] [MainThread]:   client_id: None
+[0m17:06:57.008062 [info ] [MainThread]:   token_uri: None
+[0m17:06:57.008708 [info ] [MainThread]:   compute_region: None
+[0m17:06:57.009331 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m17:06:57.009907 [info ] [MainThread]:   gcs_bucket: None
+[0m17:06:57.010489 [info ] [MainThread]:   dataproc_batch: None
+[0m17:06:57.011586 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:06:57.233616 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m17:06:57.234267 [debug] [MainThread]: On debug: select 1 as id
+[0m17:06:57.234812 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:06:57.235441 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: '/home/quakinh943/dbt_glamira_prod project-data-engineer-469310-98e0c9323b28.json''
+[0m17:06:57.235978 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m17:06:57.236480 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: '/home/quakinh943/dbt_glamira_prod project-data-engineer-469310-98e0c9323b28.json'
+[0m17:06:57.236986 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:06:57.237574 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m17:06:57.238033 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/quakinh943/dbt_glamira_prod/dbt_project.yml> not found
+
+[0m17:06:57.238516 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:06:57.239918 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 4.599736, "process_in_blocks": "3080", "process_kernel_time": 1.585632, "process_mem_max_rss": "378808", "process_out_blocks": "104", "process_user_time": 5.599287}
+[0m17:06:57.240974 [debug] [MainThread]: Command `dbt debug` failed at 17:06:57.240809 after 4.60 seconds
+[0m17:06:57.241578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f766ff8acd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7673d385d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7673d39b90>]}
+[0m17:06:57.242152 [debug] [MainThread]: Flushing usage events
+[0m17:08:51.073900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d79f96390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d7cb1f290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d79f95690>]}
+
+
+============================== 17:08:51.078599 | 4f95ddfc-4f60-4c96-9bb1-e96dfc79244c ==============================
+[0m17:08:51.078599 [info ] [MainThread]: Running with dbt=1.10.13
+[0m17:08:51.079640 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_path': 'logs', 'log_format': 'default', 'partial_parse': 'True', 'debug': 'False', 'empty': 'None', 'use_colors': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'printer_width': '80', 'write_json': 'True', 'no_print': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'profiles_dir': '/home/quakinh943/.dbt', 'indirect_selection': 'eager'}
+[0m17:08:51.092809 [info ] [MainThread]: dbt version: 1.10.13
+[0m17:08:51.093469 [info ] [MainThread]: python version: 3.11.2
+[0m17:08:51.094027 [info ] [MainThread]: python path: /home/quakinh943/dbt_glamira_prod/.venv/bin/python3
+[0m17:08:51.094516 [info ] [MainThread]: os info: Linux-6.1.0-39-cloud-amd64-x86_64-with-glibc2.36
+[0m17:08:54.443186 [info ] [MainThread]: Using profiles dir at /home/quakinh943/.dbt
+[0m17:08:54.444225 [info ] [MainThread]: Using profiles.yml file at /home/quakinh943/.dbt/profiles.yml
+[0m17:08:54.444766 [info ] [MainThread]: Using dbt_project.yml file at /home/quakinh943/dbt_glamira_prod/dbt_project.yml
+[0m17:08:54.445341 [info ] [MainThread]: adapter type: bigquery
+[0m17:08:54.445819 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:08:54.446364 [info ] [MainThread]: Configuration:
+[0m17:08:54.446842 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:08:54.447334 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m17:08:54.447840 [info ] [MainThread]: Required dependencies:
+[0m17:08:54.448372 [debug] [MainThread]: Executing "git --help"
+[0m17:08:54.451139 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:08:54.451773 [debug] [MainThread]: STDERR: "b''"
+[0m17:08:54.452209 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:08:54.452713 [info ] [MainThread]: Connection:
+[0m17:08:54.453243 [info ] [MainThread]:   method: service-account
+[0m17:08:54.453685 [info ] [MainThread]:   database: project-data-engineer-469310
+[0m17:08:54.454178 [info ] [MainThread]:   execution_project: project-data-engineer-469310
+[0m17:08:54.454661 [info ] [MainThread]:   schema: dbt_glramira
+[0m17:08:54.455147 [info ] [MainThread]:   location: US
+[0m17:08:54.455647 [info ] [MainThread]:   priority: interactive
+[0m17:08:54.456130 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m17:08:54.456607 [info ] [MainThread]:   impersonate_service_account: None
+[0m17:08:54.457083 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m17:08:54.457580 [info ] [MainThread]:   job_retries: 1
+[0m17:08:54.458077 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m17:08:54.458573 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m17:08:54.459130 [info ] [MainThread]:   timeout_seconds: 300
+[0m17:08:54.459720 [info ] [MainThread]:   client_id: None
+[0m17:08:54.460182 [info ] [MainThread]:   token_uri: None
+[0m17:08:54.460638 [info ] [MainThread]:   compute_region: None
+[0m17:08:54.461129 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m17:08:54.461574 [info ] [MainThread]:   gcs_bucket: None
+[0m17:08:54.462041 [info ] [MainThread]:   dataproc_batch: None
+[0m17:08:54.462732 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m17:08:54.697944 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m17:08:54.698608 [debug] [MainThread]: On debug: select 1 as id
+[0m17:08:54.699226 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:08:54.699995 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery " "client: '[Errno 2] No such file or directory: '/home/quakinh943/dbt_glamira_prod project-data-engineer-469310-98e0c9323b28.json''
+[0m17:08:54.700619 [debug] [MainThread]: BigQuery adapter: Unhandled error while running:
+select 1 as id
+[0m17:08:54.701178 [debug] [MainThread]: BigQuery adapter: Database Error
+  [Errno 2] No such file or directory: '/home/quakinh943/dbt_glamira_prod project-data-engineer-469310-98e0c9323b28.json'
+[0m17:08:54.701767 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:08:54.702456 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m17:08:54.703020 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/quakinh943/dbt_glamira_prod/dbt_project.yml> not found
+
+[0m17:08:54.703579 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >'NoneType' object has no attribute 'close'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:08:54.705058 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 3.7049253, "process_in_blocks": "0", "process_kernel_time": 0.791906, "process_mem_max_rss": "379200", "process_out_blocks": "24", "process_user_time": 5.249094}
+[0m17:08:54.706193 [debug] [MainThread]: Command `dbt debug` failed at 17:08:54.705970 after 3.71 seconds
+[0m17:08:54.706781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d7a1421d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d79fc8150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6d5a5767d0>]}
+[0m17:08:54.707461 [debug] [MainThread]: Flushing usage events
+[0m17:08:54.935670 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:34:22.263664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0021fd210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa002375e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0023756d0>]}
+
+
+============================== 09:34:22.360147 | 21fb45f3-b2d4-43af-b8a8-58908ad2139f ==============================
+[0m09:34:22.360147 [info ] [MainThread]: Running with dbt=1.10.13
+[0m09:34:22.361277 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/quakinh943/.dbt', 'empty': 'None', 'warn_error': 'None', 'version_check': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'log_path': 'logs', 'use_colors': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'write_json': 'True', 'quiet': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'no_print': 'None', 'introspect': 'True', 'printer_width': '80'}
+[0m09:34:22.374434 [info ] [MainThread]: dbt version: 1.10.13
+[0m09:34:22.375131 [info ] [MainThread]: python version: 3.11.2
+[0m09:34:22.375789 [info ] [MainThread]: python path: /home/quakinh943/dbt_glamira_prod/.venv/bin/python3
+[0m09:34:22.376309 [info ] [MainThread]: os info: Linux-6.1.0-39-cloud-amd64-x86_64-with-glibc2.36
+[0m09:34:26.157753 [info ] [MainThread]: Using profiles dir at /home/quakinh943/.dbt
+[0m09:34:26.158657 [info ] [MainThread]: Using profiles.yml file at /home/quakinh943/.dbt/profiles.yml
+[0m09:34:26.159095 [info ] [MainThread]: Using dbt_project.yml file at /home/quakinh943/dbt_glamira_prod/dbt_project.yml
+[0m09:34:26.159562 [info ] [MainThread]: adapter type: bigquery
+[0m09:34:26.159980 [info ] [MainThread]: adapter version: 1.10.2
+[0m09:34:26.160428 [info ] [MainThread]: Configuration:
+[0m09:34:26.160869 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:34:26.161262 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m09:34:26.161628 [info ] [MainThread]: Required dependencies:
+[0m09:34:26.162064 [debug] [MainThread]: Executing "git --help"
+[0m09:34:26.164909 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:34:26.165542 [debug] [MainThread]: STDERR: "b''"
+[0m09:34:26.166212 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:34:26.166767 [info ] [MainThread]: Connection:
+[0m09:34:26.167325 [info ] [MainThread]:   method: service-account
+[0m09:34:26.167905 [info ] [MainThread]:   database: project-data-engineer-469310
+[0m09:34:26.168428 [info ] [MainThread]:   execution_project: project-data-engineer-469310
+[0m09:34:26.169137 [info ] [MainThread]:   schema: dbt_glramira
+[0m09:34:26.169682 [info ] [MainThread]:   location: africa-south1
+[0m09:34:26.170216 [info ] [MainThread]:   priority: interactive
+[0m09:34:26.170724 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m09:34:26.171265 [info ] [MainThread]:   impersonate_service_account: None
+[0m09:34:26.171814 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m09:34:26.172414 [info ] [MainThread]:   job_retries: 1
+[0m09:34:26.173222 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m09:34:26.173837 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m09:34:26.174492 [info ] [MainThread]:   timeout_seconds: 300
+[0m09:34:26.175131 [info ] [MainThread]:   client_id: None
+[0m09:34:26.175703 [info ] [MainThread]:   token_uri: None
+[0m09:34:26.176209 [info ] [MainThread]:   compute_region: None
+[0m09:34:26.176731 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m09:34:26.177226 [info ] [MainThread]:   gcs_bucket: None
+[0m09:34:26.177657 [info ] [MainThread]:   dataproc_batch: None
+[0m09:34:26.178498 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m09:34:26.395062 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m09:34:26.395772 [debug] [MainThread]: On debug: select 1 as id
+[0m09:34:26.396375 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:34:35.982984 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-data-engineer-469310&j=bq:africa-south1:619d8783-b73a-4810-9f26-326333fd8e08&page=queryresults
+[0m09:34:36.855987 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:34:36.856714 [info ] [MainThread]: [31m1 check failed:[0m
+[0m09:34:36.857311 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/quakinh943/dbt_glamira_prod/dbt_project.yml> not found
+
+[0m09:34:36.858568 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 14.674343, "process_in_blocks": "296", "process_kernel_time": 1.554653, "process_mem_max_rss": "385524", "process_out_blocks": "32", "process_user_time": 5.324922}
+[0m09:34:36.859252 [debug] [MainThread]: Command `dbt debug` failed at 09:34:36.859088 after 14.68 seconds
+[0m09:34:36.859789 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:34:36.860359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0021d3510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9fe26ee2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa00634b010>]}
+[0m09:34:36.860953 [debug] [MainThread]: Flushing usage events
+[0m09:34:37.058006 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:13:20.499337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fc2059a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fc21a9ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fc21a9a10>]}
+
+
+============================== 06:13:20.506343 | f6272f9f-5263-4d69-9ee6-c941f7d54de7 ==============================
+[0m06:13:20.506343 [info ] [MainThread]: Running with dbt=1.10.13
+[0m06:13:20.507420 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'write_json': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'quiet': 'False', 'log_path': 'logs', 'empty': 'None', 'profiles_dir': '/home/quakinh943/.dbt', 'introspect': 'True', 'warn_error': 'None', 'no_print': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'use_colors': 'True', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'static_parser': 'True', 'debug': 'False', 'target_path': 'None'}
+[0m06:13:20.521901 [info ] [MainThread]: dbt version: 1.10.13
+[0m06:13:20.522643 [info ] [MainThread]: python version: 3.11.2
+[0m06:13:20.523245 [info ] [MainThread]: python path: /home/quakinh943/dbt_glamira_prod/.venv/bin/python3
+[0m06:13:20.523812 [info ] [MainThread]: os info: Linux-6.1.0-39-cloud-amd64-x86_64-with-glibc2.36
+[0m06:13:24.580032 [info ] [MainThread]: Using profiles dir at /home/quakinh943/.dbt
+[0m06:13:24.581223 [info ] [MainThread]: Using profiles.yml file at /home/quakinh943/.dbt/profiles.yml
+[0m06:13:24.581822 [info ] [MainThread]: Using dbt_project.yml file at /home/quakinh943/dbt_glamira_prod/dbt_project.yml
+[0m06:13:24.582366 [info ] [MainThread]: adapter type: bigquery
+[0m06:13:24.582827 [info ] [MainThread]: adapter version: 1.10.2
+[0m06:13:24.583335 [info ] [MainThread]: Configuration:
+[0m06:13:24.583795 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m06:13:24.584269 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m06:13:24.584718 [info ] [MainThread]: Required dependencies:
+[0m06:13:24.585218 [debug] [MainThread]: Executing "git --help"
+[0m06:13:24.588783 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m06:13:24.589454 [debug] [MainThread]: STDERR: "b''"
+[0m06:13:24.589941 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m06:13:24.590466 [info ] [MainThread]: Connection:
+[0m06:13:24.590973 [info ] [MainThread]:   method: service-account
+[0m06:13:24.591498 [info ] [MainThread]:   database: project-data-engineer-469310
+[0m06:13:24.591953 [info ] [MainThread]:   execution_project: project-data-engineer-469310
+[0m06:13:24.592412 [info ] [MainThread]:   schema: dbt_glramira
+[0m06:13:24.592854 [info ] [MainThread]:   location: africa-south1
+[0m06:13:24.593309 [info ] [MainThread]:   priority: interactive
+[0m06:13:24.593753 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m06:13:24.594239 [info ] [MainThread]:   impersonate_service_account: None
+[0m06:13:24.594762 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m06:13:24.595408 [info ] [MainThread]:   job_retries: 1
+[0m06:13:24.596024 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m06:13:24.596638 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m06:13:24.597277 [info ] [MainThread]:   timeout_seconds: 300
+[0m06:13:24.597899 [info ] [MainThread]:   client_id: None
+[0m06:13:24.598525 [info ] [MainThread]:   token_uri: None
+[0m06:13:24.599137 [info ] [MainThread]:   compute_region: None
+[0m06:13:24.599781 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m06:13:24.600383 [info ] [MainThread]:   gcs_bucket: None
+[0m06:13:24.600934 [info ] [MainThread]:   dataproc_batch: None
+[0m06:13:24.601690 [info ] [MainThread]: Registered adapter: bigquery=1.10.2
+[0m06:13:24.829151 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m06:13:24.829824 [debug] [MainThread]: On debug: select 1 as id
+[0m06:13:24.830463 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m06:13:27.573529 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=project-data-engineer-469310&j=bq:africa-south1:dda2b2d9-961c-4edd-907a-dc29e876f002&page=queryresults
+[0m06:13:28.452822 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m06:13:28.453634 [info ] [MainThread]: [31m1 check failed:[0m
+[0m06:13:28.454184 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/quakinh943/dbt_glamira_prod/dbt_project.yml> not found
+
+[0m06:13:28.455634 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 8.039154, "process_in_blocks": "856", "process_kernel_time": 1.523711, "process_mem_max_rss": "385436", "process_out_blocks": "16", "process_user_time": 5.692943}
+[0m06:13:28.456331 [debug] [MainThread]: Command `dbt debug` failed at 06:13:28.456168 after 8.04 seconds
+[0m06:13:28.456869 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m06:13:28.457452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fc1fff610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fc4b05850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2fc22b8990>]}
+[0m06:13:28.458110 [debug] [MainThread]: Flushing usage events
+[0m06:13:28.673362 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m06:03:18.433451 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa55ae2f190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa55adf9d50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa55adcd810>]}
+
+
+============================== 06:03:18.439669 | 48342adf-9bbd-4d0e-bc14-f0a279ad0db8 ==============================
+[0m06:03:18.439669 [info ] [MainThread]: Running with dbt=1.10.13
+[0m06:03:18.440605 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': 'logs', 'quiet': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run -m stg_fact_orders', 'version_check': 'True', 'write_json': 'True', 'use_colors': 'True', 'debug': 'False', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'log_format': 'default', 'profiles_dir': '/home/quakinh943/.dbt'}
+[0m06:03:18.441351 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m06:03:18.441973 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '48342adf-9bbd-4d0e-bc14-f0a279ad0db8', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa55adf9f10>]}
+[0m06:03:18.442808 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/quakinh943/dbt_glamira_prod/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m06:03:18.443624 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m06:03:18.444879 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.08591259, "process_in_blocks": "16", "process_kernel_time": 0.322855, "process_mem_max_rss": "99860", "process_out_blocks": "16", "process_user_time": 1.769395}
+[0m06:03:18.445581 [debug] [MainThread]: Command `dbt run` failed at 06:03:18.445415 after 0.09 seconds
+[0m06:03:18.446291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa55af7a150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa55af79cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa55adcffd0>]}
+[0m06:03:18.446885 [debug] [MainThread]: Flushing usage events
+[0m06:03:18.640341 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:11:07.683714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf140e0fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf112edc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1141aad0>]}
+
+
+============================== 09:11:07.696946 | 12f8096a-f861-43d7-b5d0-fac28cada833 ==============================
+[0m09:11:07.696946 [info ] [MainThread]: Running with dbt=1.10.13
+[0m09:11:07.698118 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'warn_error': 'None', 'profiles_dir': '/home/quakinh943/.dbt', 'cache_selected_only': 'False', 'log_path': 'logs', 'version_check': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_format': 'default', 'invocation_command': 'dbt run -m stg_fact_orders', 'use_colors': 'True', 'write_json': 'True', 'target_path': 'None'}
+[0m09:11:07.698910 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m09:11:07.699602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '12f8096a-f861-43d7-b5d0-fac28cada833', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf114a5fd0>]}
+[0m09:11:07.700435 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/quakinh943/dbt_glamira_prod/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:11:07.701261 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m09:11:07.702566 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.09103778, "process_in_blocks": "56", "process_kernel_time": 0.432868, "process_mem_max_rss": "99748", "process_out_blocks": "16", "process_user_time": 1.855827}
+[0m09:11:07.703328 [debug] [MainThread]: Command `dbt run` failed at 09:11:07.703114 after 0.09 seconds
+[0m09:11:07.704181 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf115a1e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf112ee050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf1555f250>]}
+[0m09:11:07.704805 [debug] [MainThread]: Flushing usage events
+[0m09:11:07.905867 [debug] [MainThread]: An error was encountered while trying to flush usage events
